@@ -1,0 +1,123 @@
+<html>
+  <head>
+    <title>Log4j mode - view log files in Emacs</title>
+    <link href="log4j-mode.css" rel="stylesheet" type="text/css">
+  </head>
+
+  <body background="background.gif" bgcolor="#CFCFD7" text="#282A55" link="#3B00CA" vlink="#093384" alink="#8551FF">
+
+    <p align="center"><img src="banner.gif" width="708" height="88" alt="Log4j mode"></p>
+
+    <h2>Overview</h2>
+    <p>
+      <i>Log4j mode</i> is a major mode for viewing log files in Emacs. It can
+      be used to view any text based log file, even though the name refers to a
+      specific logging package. Log4j mode provides syntax highlighting,
+      filtering, and source code browsing.
+    </p>
+
+    <p>
+      There are many applications that can be used to view log files, but using
+      Log4j mode allows you to do it without leaving Emacs. It also provides
+      good integration with the source code.
+    </p>
+
+    <h2>Features</h2>
+    <p>
+      The major features of Log4j mode are described below.
+      See <a href="screenshots.html">screenshots</a> for examples of how this
+      looks in GNU Emacs.
+    </p>
+
+    <p>
+      <b>Syntax highlighting</b>
+    </p>
+
+    <p>
+      Log4j mode uses customizable regexps with keywords such as DEBUG and
+      ERROR to syntax highlight log records. Different faces are used for
+      different log levels. The user can customize both the regexps, and the
+      faces that are used for syntax highlighting.
+    </p>
+
+    <p>
+      <b>Filtering</b>
+    </p>
+
+    <p>
+      Log4j mode can filter a log file buffer using keywords specified by the
+      user, creating a new buffer that contains only matching log records. When
+      the source buffer is auto reverted, the filter buffer will be updated
+      too.
+    </p>
+
+    <p>
+      To filter a log file buffer, type C-c C-s, and enter the desired filter
+      criteria - any number of keywords separated by spaces. Log records that
+      contain any of the words in the include list, and none of the words in
+      the exclude list, will be copied to the filter buffer. All other log
+      records will be discarded. To stop filtering the log file buffer, just
+      type C-c C-s again.
+    </p>
+
+    <p>
+      <b>Source code browsing</b>
+    </p>
+
+    <p>
+      Source code browsing is provided using
+      <a href="http://jtags.sourceforge.net"><i>jtags</i></a> - an Emacs
+      package for editing and browsing Java source code. It is possible to jump
+      from a log file to a point in the source code where a certain log record
+      was generated.
+    </p>
+
+    <p>
+      To show the source code for a Java identifier found in the log file,
+      place the point in the identifier, and type C-c C-b. Log4j mode will
+      parse the expression around point, and look up the Java identifier found
+      using package jtags. If you are not using jtags, or if you are not
+      developing in Java, you can still use the built-in tags lookup feature.
+      Type M-. to run the find-tag command in the <i>etags</i> package.
+    </p>
+
+    <h2>Compatibility</h2>
+    <p>
+      The latest version of Log4j mode has been tested in GNU Emacs 23.1 and
+      GNU Emacs 24.5 running on Windows 7.
+    </p>
+
+    <h2>Download</h2>
+    <p>
+      Download the latest <i>release</i> version of Log4j mode
+      <a href="http://sourceforge.net/project/showfiles.php?group_id=156688">here</a>,
+      and start viewing your log files in color today. The release notes can be found
+      <a href="changes.html">here</a>. Installation notes are included within
+      the Emacs Lisp file itself. GNU Emacs users can also download and install
+      Log4j mode from <a href="http://melpa.org">MELPA</a>.
+    </p>
+
+    <p>
+      The latest <i>development</i> version of log4j-mode can be found in the
+      <a href="http://sourceforge.net/p/log4j-mode/code/ci/master/tree">Git repository</a>.
+    </p>
+
+    <p align="center"><img src="rule.gif" width="561" height="11"></p>
+    <table width="100%">
+      <tr>
+        <td class="Footer" align="left">
+          &copy; Johan Dykstr&ouml;m 2016
+        </td>
+        <td class="Footer" align="center">
+          <a href="http://sourceforge.net/projects/log4j-mode">
+            <img src="http://sflogo.sourceforge.net/sflogo.php?group_id=34232&amp;type=12" width="120" height="30" alt="Get Log4j mode - view log files in Emacs at SourceForge.net. Fast, secure and Free Open Source software downloads" />
+          </a>
+        </td>
+        <td class="Footer" align="right">
+          <!-- hhmts start -->Last modified: 2016-01-10 12:15:15<!-- hhmts end -->
+        </td>
+      </tr>
+    </table>
+
+  </body>
+</html>
